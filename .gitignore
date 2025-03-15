@@ -21,6 +21,7 @@ logs/
 mvnw
 mvnw.cmd
 .mvn
+.gitattributes
 # .mvn/wrapper/maven-wrapper.jar
 
 application-prd.yml

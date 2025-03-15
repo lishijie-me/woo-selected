@@ -6,12 +6,30 @@
 
     <groupId>io.money.boot</groupId>
     <artifactId>woo-selected</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
+    <name>${project.artifactId}</name>
+    <description>基于 spring-boot 3.x的编码</description>
+    <packaging>pom</packaging>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <jdk.version>21</jdk.version>
+        <revision>1.0.0</revision>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>woo-common</module>
+        <module>woo-order</module>
+        <module>woo-user</module>
+        <module>woo-product</module>
+    </modules>
 </project>
